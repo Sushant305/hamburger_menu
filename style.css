@@ -11,11 +11,11 @@ html{
 }
 
 body{
-    font-family:'Poppins', sans-serif;
+    font-family:'Poppins',sans-serif;
     background:#ffffff;
 }
 
-/* Header */
+/* HEADER */
 
 header{
     display:flex;
@@ -30,6 +30,8 @@ header{
     z-index:100;
 }
 
+/* LOGO */
+
 .logo{
     display:flex;
     align-items:center;
@@ -41,28 +43,30 @@ header{
 }
 
 .logo p{
-    font-family:"Style Script", cursive;
+    font-family:"Style Script",cursive;
     font-size:32px;
-    font-weight:700;
     color:#333;
 }
 
-ul{
+/* DESKTOP NAV */
+
+.desktop-nav ul{
     display:flex;
-    align-items:center;
     gap:30px;
 }
 
-ul li{
+.desktop-nav ul li{
     list-style:none;
     font-weight:500;
     cursor:pointer;
     transition:0.3s;
 }
 
-ul li:hover{
+.desktop-nav ul li:hover{
     color:#1ea7fd;
 }
+
+/* USER BUTTON */
 
 .user button{
     padding:12px 24px;
@@ -73,15 +77,72 @@ ul li:hover{
     font-size:15px;
     font-weight:600;
     cursor:pointer;
-    transition:all 0.3s ease;
 }
 
 .user button:hover{
     background:#0d8de0;
-    transform:translateY(-2px);
 }
 
-/* Hero Section */
+/* HAMBURGER */
+
+.hamburger{
+    display:none;
+    position:relative;
+}
+
+.hamburger-btn{
+    background:none;
+    border:none;
+    cursor:pointer;
+}
+
+.hamburger-btn span{
+    display:block;
+    width:30px;
+    height:3px;
+    background:#333;
+    margin:6px 0;
+    border-radius:10px;
+}
+
+/* MOBILE NAV */
+
+.mobile-nav{
+    display:none;
+    position:fixed;
+    top:0;
+    right:0;
+    width:75%;
+    height:100vh;
+    background:#000;
+    padding-top:120px;
+    z-index:999;
+}
+
+.mobile-nav ul{
+    list-style:none;
+    text-align:center;
+}
+
+.mobile-nav ul li{
+    padding:18px;
+    color:white;
+    font-size:20px;
+    cursor:pointer;
+    transition:0.3s;
+}
+
+.mobile-nav ul li:hover{
+    color:#1ea7fd;
+}
+
+/* OPEN MENU */
+
+.hamburger:focus-within .mobile-nav{
+    display:block;
+}
+
+/* HERO SECTION */
 
 .hero{
     min-height:calc(100vh - 80px);
@@ -127,8 +188,8 @@ ul li:hover{
 }
 
 .hero-content button:hover{
-    transform:translateY(-4px) scale(1.05);
-    box-shadow:0 10px 25px rgba(30,167,253,0.4);
+    transform:translateY(-4px);
+    box-shadow:0 10px 25px rgba(30,167,253,0.3);
 }
 
 .hero-image img{
@@ -136,7 +197,7 @@ ul li:hover{
     max-width:100%;
 }
 
-/* Tablet */
+/* TABLET */
 
 @media (max-width:992px){
 
@@ -160,28 +221,38 @@ ul li:hover{
     }
 }
 
-/* Mobile */
+/* MOBILE */
 
 @media (max-width:576px){
 
     header{
-        flex-direction:column;
+        padding:15px 20px;
+    }
+
+    .desktop-nav{
+        display:none;
+    }
+
+    .user{
+        display:none;
+    }
+
+    .hamburger{
+        display:block;
+    }
+
+    .logo img{
+        width:70px;
         height:auto;
-        padding:15px;
     }
 
-    .logo{
-        margin-bottom:10px;
-    }
-
-    ul{
-        flex-wrap:wrap;
-        justify-content:center;
-        gap:15px;
-        margin:10px 0;
+    .logo p{
+        font-size:24px;
     }
 
     .hero{
+        flex-direction:column;
+        text-align:center;
         padding:40px 20px;
     }
 
@@ -194,7 +265,8 @@ ul li:hover{
     }
 
     .hero-image img{
-        width:300px;
+        width:280px;
+        margin-top:30px;
     }
 
     .hero-content button{
