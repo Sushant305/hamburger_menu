@@ -30,8 +30,21 @@ ul li{
 }
 ul{
     display: flex;
-    gap: 30px;
     padding: 10px;
+}
+ul li{
+    height: 20px;
+    width: 109px;
+    align-items: center;
+    /* border: 1px solid black; */
+    justify-content: center;
+    display: flex;
+    padding: 16px;
+    border-radius: 22px;
+}
+ul li:hover{
+    color: rgb(76, 128, 250);
+    background-color: rgba(167, 255, 255, 0.911);
 }
 button{
     padding: 10px 20px;
