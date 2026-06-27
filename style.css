@@ -68,13 +68,13 @@ button{
     margin:30px auto;
     display:flex;
     padding:20px;
-    border: 1px solid black;
+    /* border: 1px solid black; */
 }
 
 .text-content{
     width: 50%;
     height: 100%;
-    border: 1px solid black;
+    /* border: 1px solid black; */
     padding: 40px;
     display: flex;
     flex-direction: column;
@@ -115,7 +115,7 @@ img{
 .img-content{
     width: 50%;
     height: 100%;
-    border: 1px solid black;
+    /* border: 1px solid black; */
     display: flex;
     justify-content: center;
     align-items: center;
